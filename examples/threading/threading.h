@@ -24,7 +24,7 @@ struct thread_data{
 
 
 /**
-* @param thread TODO1
+* @param thread The thread to be created
 * @param mutex  TODO2
 * @param wait_to_obtain_ms  TODO3
 * @param wait_to_release_ms TODO4
