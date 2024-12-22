@@ -14,6 +14,7 @@ struct thread_data{
      * between the start_thread_obtaining_mutex function and
      * your thread implementation.
      */
+    pthread_t pid;
 
     /**
      * Set to true if the thread completed with success, false
@@ -25,9 +26,9 @@ struct thread_data{
 
 /**
 * @param thread The thread to be created
-* @param mutex  TODO2
-* @param wait_to_obtain_ms  TODO3
-* @param wait_to_release_ms TODO4
+* @param mutex  The mutex associated with the thread
+* @param wait_to_obtain_ms  time to wait before obtaining the mutex, in ms
+* @param wait_to_release_ms time to wait before releasing the mutex, in ms
 * 
 * Start a thread which sleeps `wait_to_obtain_ms` number of milliseconds, then obtains the
 * mutex in `mutex`, then holds for `wait_to_release_ms` milliseconds, then releases.
